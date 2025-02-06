@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    position: relative; /* Positions footer relative to its normalposition */ 
+    text-align: center;
+    margin-top: auto; /* Pushes footer down to the bottom of its container */
+    width: 100%; /* Takes up full width */
+    bottom: 0; /* Ensure footer stays at the bottom of the page */
+}
+
+.darkMode footer { /* Changes text color in dark mode */
+    color: rgb(150, 146, 146);
+}

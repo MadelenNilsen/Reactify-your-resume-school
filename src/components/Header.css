@@ -1,0 +1,121 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Dongle&family=Funnel+Display:wght@300..800&family=Noto+Serif+Oriya:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Pochaevsk&family=Radley:ital@0;1&family=Roboto+Slab:wght@100..900&family=Oleo+Script&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.CV-title { /* Madelen'a CV Title */
+    font-family: "Oleo Script", serif;
+    color: #267daf;
+    font-size: 3rem;
+    text-align: left;
+    margin-top: 20px; /* Adds space above element */
+}
+
+.darkMode .CV-title { /* Different syling in dark mode */
+    color: rgb(165, 158, 158);
+}
+
+
+.header.dark {
+    color: white;
+}
+
+header.light {
+    color: black;
+}
+
+
+nav {
+    font-family: "Roboto", serif;
+    text-align: left; /* Align text to the left */
+    padding: 10px;
+    overflow: hidden; /* Prevents overflow */
+}
+  
+  nav ul {
+    list-style: none; /* Removes bulletpoints */
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 0;
+    gap: 20px; /* Space between elements*/
+}
+  
+  nav ul li {
+    display: inline; /* Makes list imtems lay next to eachother */
+}
+  
+  nav ul li a {
+    background-color: #2274A5;
+    color: black;
+    display: inline-flex; /* Makes the link behave like a flex container for better alignment */
+    font-size: 1rem;
+    min-width: 100px; /* Ensure links have a min width */
+    justify-content: center;
+    text-decoration: none; /* Removes underline */
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 50px; /* Rounded edges */
+    padding: 10px 20px;
+   
+}
+  
+  nav ul li a:hover {
+    cursor: pointer;
+}
+ /* dark mode */
+.darkMode nav ul li a { /* Different syling for dark mode */
+    background-color: gray;
+    color: white;
+    border: 1px solid white;
+}
+
+
+@media screen and (max-width: 577px) { /* var 450 */
+   /* Show the hamburger menu button */
+   .menu-toggle {
+    display: block; /* Make the hamburger menu visible, stacking other elements under it */
+    border-radius: 10px; /* Rounded edges */
+    cursor: pointer;
+    padding: 10px;
+    top: 10px; /* Positioning the button on the top of page */
+    left: 10px; /* 10px to the left */
+}
+
+.CV-title {
+    display: none; /* Hide CV-title on smaller screens */
+}
+   
+    /* Hide the nav links by default */
+    nav ul {
+        display: none;
+        /* flex-direction: column; */
+    }
+
+    /* Stack nav links vertically */
+    nav ul li {
+        display: block; 
+        padding: 20px;
+        margin: 0%;
+    }
+
+
+    /* Show nav links when the menu is active */
+    nav.active ul {
+        display: block; /* var flex */
+        background-color: rgba(127, 161, 255, 0.161);
+        margin-top: 40px; /* distance between text and top of screen */
+    }
+}
+
+/* Larger screen styling for screens above 450px */
+@media screen and (min-width: 578px) { /* var 451 */
+    .menu-toggle {
+        display: none; /* Hide the hamburger menu on larger screens */
+    }
+}

@@ -1,0 +1,263 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Dongle&family=Fjalla+One&family=Funnel+Display:wght@300..800&family=Noto+Serif+Oriya:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oleo+Script:wght@400;700&family=Orbitron:wght@400..900&family=Pochaevsk&family=Radley:ital@0;1&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Base styles */
+html, body {
+  width: 100%; /* Ensures HTML and body elements take up full width and height */
+  height: 100%;/* Ensures HTML and body elements take up full width  and height */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.App {
+  min-height: 100vh; /* Ensure background covers full screen */
+  display: flex;
+  flex-direction: column; /* Items arranged vertically */
+  justify-content: flex-start; /* Keep title at the top */
+  padding: 20px; /* Adds space */
+  transition: 0.3s ease-in-out; /* Smooth theme transition */
+}
+
+/*       PROFILE PAGE        */
+.profile-title {
+  font-family: "Bona Nova SC", serif;
+  font-size: 2rem;
+  margin: 20px; /* Adds space around element */
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Items arranged vertically */
+  font-size: 1rem;
+  font-family: "Roboto", serif;
+  max-width: 90%; /* Stops text from overspilling */
+  background-color: #247db4c8;
+  border: 5px double #2d5978; 
+  border-radius: 10px; /* Rounded edges */
+  padding: 30px; /* Adds space */
+  margin: 0 auto; /* Horizontally centers element within parent container */
+}
+
+.profile-pictures {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap; /* Wraps when running out of space */
+ gap: 10px; /* Space between photos */
+ margin-top: 20px;
+ margin-bottom: 40px;
+ color: white;
+}
+
+.profile-photo {
+  width: 500px; /* Ensures all pictures are same width */
+  height: 700px; /* Ensures all pictures are same height */
+  object-fit: cover; /* Ensures the image will cover entire area of element */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Dark mode */
+.darkMode .profile-title {
+  color: rgb(143, 154, 166);
+}
+
+.darkMode .profile-container {
+  border: none;
+  background-color: gray;
+  color: black;
+}
+
+
+/*       CV PAGE        */
+.section-cv {
+  margin: 30px auto; /* Centers element horizontally and adds 30px of space */
+  max-width: 90%; /* Max 90% of parent containers width */
+  border: 1px solid black;
+  border-radius: 5px; /* Rounded corners */
+  padding: 30px; /* Adds space */
+}
+
+.cv-heading {
+  font-size: 28px;
+  margin-bottom: 10px; /* Adds space below element */
+  text-transform: uppercase; /* Converts text to uppercase */
+  color: rgba(60, 57, 57, 0.773)
+}
+
+.cv-list {
+  list-style: none; /* Removes bulletpoints */
+}
+
+.cv-list li {
+  font-size: 20px;
+  line-height: 1.2; /* Makes text more spaced out, better readability */
+  margin-bottom: 10px; /* Adds space below element */
+}
+
+.cv-job {
+  margin-top: 20px; /* Adds space above element */
+}
+
+.cv-job h3 {
+  font-size: 20px; /* Font size for h3 elements */
+}
+
+.cv-job p {
+  font-size: 18px;
+  color: rgb(60, 57, 57)
+}
+
+.cv-heading, .cv-job, .cv-list {
+  margin-bottom: 20px; /* Adds space between the different sections */
+}
+
+/* dark mode */
+.darkMode .cv-heading { /* Changes text color when dark mode is activated */
+  color: rgb(122, 116, 116);
+}
+
+.darkMode .section-cv { /* Changes border when dark mode is activated */
+  border: 1px solid white;
+}
+
+
+/*        PROJECTS PAGE         */
+.projects-title {
+  font-family: "Bona Nova SC", serif;
+  margin-top: 30px; /* Adds space above element */
+}
+
+.project-container {
+  display: grid; /* Positiones child elements within container */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Reapeats columns of set size with how mnay columns can fit */
+  gap: 20px; /* Space between projects */
+  padding: 20px; /* Adds space */
+  margin-top: 20px; /* Adds space above element */
+}
+
+/* For light mode */
+.project-card {
+  background-image: url(https://images.unsplash.com/photo-1507166763745-bfe008fbb831?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG9jZWFufGVufDB8fDB8fHww);
+  padding: 20px; /* Adds space */
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 50px; /* Rounded edges */
+  text-align: center;
+  min-height: 200px; /* Min height of project cards */
+  overflow: hidden; /* Prevents overflow */
+  color: white;
+  font-family: "Roboto", serif;
+}
+
+.project-card a { /* Hyperlink */
+  color: white;
+  font-family: "Roboto", serif;
+}
+
+/* For dark mode */
+.darkMode .project-card {
+  background-image: url(https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGRhcmslMjBvY2VhbnxlbnwwfHwwfHx8MA%3D%3D); /* Different photo */
+  color: black;
+}
+
+.darkMode .project-card a { /* Changes text color to black in dark mode */
+  color: black;
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Moves project card 5px upward along the Y-axis when card is hovered over */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*      CONTACT FORM PAGE        */
+.input-focus { /* Styles input element when it gain focus */
+  border: 2px solid #e3ee48; /* Add a solid border */
+  background-color: #0d0c0c; /* Slightly lighter background */
+  box-shadow: 0 0 5px rgba(0, 188, 212, 0.5);
+  outline: none; /* Removes default outline */
+}
+.contact-form {
+  background-color: #2274A5;
+  padding: 20px; /* Adds space */
+  color: black;
+  border: 1px solid rgba(15, 15, 181, 0.765);
+  max-width: 500px; /* Limits width to 500px */
+  margin: 0 auto; /* Centers form horizontally */
+}
+
+.contact-row {
+  display: flex;
+  gap: 15px; /* Gap between elements */
+  margin-top: 20px; /* Space above element */
+  margin-bottom: 10px; /* Space below */
+}
+
+.contact-row label,
+.contact-row input {
+  flex: 1; /* Makes both inputs equal width */
+}
+
+textarea {
+  width: 100%; /* Takes up 100% of available width */
+  height: 120px; /* Sets height */
+  margin-top: 10px; /* Space above element */
+}
+
+.contact-btn {
+  margin-top: 5px; /* Space above element */
+  border-radius: 5px; /* Rounded corners */
+  padding: 5px; /* Adds space */
+}
+
+/* Dark mode */
+.darkMode .contact-form { /* Changes colors in dark mode */
+  color: white;
+  background-color: rgb(48, 44, 44);
+  border: 1px solid gray;
+}
+
+.darkMode .contact-row label, /* Changes colors in dark mode */
+.darkMode .contact-row input,
+.darkMode textarea {
+  background-color: rgb(87, 83, 83);
+  border: 1px solid gray;
+  color: rgb(234, 228, 228);
+}
+
+.darkMode .contact-btn { /* Changes button in dark mode */
+  background-color: gray;
+  color: rgb(13, 13, 13);
+}
+
+/* Media queries */
+/* Profile pics */
+@media (max-width: 768px) {
+  .profile-pictures {
+    grid-template-columns: repeat(1,1fr); /* Pictures are under eachother on mobile screens */
+  }
+}
+
+/* contact form */
+@media screen and (max-width: 768px) {
+  .contact-form {
+    padding: 15px; /* Adds space */
+  }
+
+  .contact-row {
+    display: flex;
+    flex-direction: column; /* Stacks vertically on smaller screens */
+  }
+  .contact-row label
+  .contact.row input {
+    width: 100%; /* Takes up full width */
+    margin-bottom: 10px; /* Adds space below element */
+  }
+
+  .contact-btn {
+    padding: 10px; /* Adds space making button bigger on smaller screens */
+  }
+}
+

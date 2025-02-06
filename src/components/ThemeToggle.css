@@ -1,0 +1,28 @@
+body {
+    position: relative; /* Now everything with absolute positioning will be relative to the body */
+}
+
+.theme-toggle {
+    position: absolute; 
+    top: 20px;          /* Position it 20px from the top */
+    right: 20px;        /* Position it 20px from the right edge */
+    background-color: #fff;
+    border: 1px solid black;
+    padding: 10px 20px; /* Top/bottom, left/right */
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 50px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition when background color changes */
+}
+
+/* Styles for dark mode */
+.darkMode {
+    background-color: #262626; 
+    color: #ffffff; 
+}
+  
+  /* Styles for light mode */
+  .lightMode {
+    background-color: #ffffff; 
+    color: #000000;
+}
