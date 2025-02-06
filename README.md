@@ -1,8 +1,38 @@
-# React + Vite
+I have built a CV website with React and Redux showcasing my projects, experience and contact details. It includes a dark theme toggle, a contact form, a profile, a CV and a project section fetching data from my GitHub API.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My Design:
+My website follows a dark/light theme where in light mode you get pop of colors that makes the website fun to look at, and while in dark mode you get a subdued, easy on the eyes website that doesn't make your head hurt.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+Features:
+Dark mode toggle using Redux.
+Responsive design for all screen sizes.
+Navigation using React Router.
+Contact form with auto-focus using useRef.
+Display of my GitHub projects using an API.
+
+Dependencies:
+React.
+Redux Toolkit.
+React Router.
+Vite.
+Font Awesome.
+react-photo-album.
+useState, useEffect, useRef.
+
+
+
+
+
+How to Install:
+
+1. Clone the repository:
+  git clone https://github.com/madelennilsen/Reactify-your-resume.git
+  cd Reactify-your-resume
+
+2. Install dependencies:
+   npm install
+
+3. Start the development server:
+   npm run dev
