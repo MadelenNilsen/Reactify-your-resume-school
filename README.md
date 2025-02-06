@@ -28,11 +28,13 @@ useState, useEffect, useRef.
 How to Install:
 
 1. Clone the repository:
-  git clone https://github.com/madelennilsen/Reactify-your-resume.git
-  cd Reactify-your-resume
+  git clone https://github.com/madelennilsen/Reactify-your-resume-school.git
+ 
+2. Navigate to the project directory:
+   cd Reactify-your-resume-school
 
-2. Install dependencies:
+4. Install dependencies:
    npm install
 
-3. Start the development server:
+5. Start the development server:
    npm run dev
